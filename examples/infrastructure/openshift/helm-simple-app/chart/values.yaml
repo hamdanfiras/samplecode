@@ -1,0 +1,24 @@
+# Default values for the learning chart.
+
+replicaCount: 1
+
+image:
+  repository: quay.io/openshift/origin-hello-openshift
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+containerPort: 8080
+
+service:
+  type: ClusterIP
+  port: 80
+
+route:
+  enabled: true
+  # Leave empty to let OpenShift generate a hostname.
+  host: ""
+  tls:
+    enabled: false
+    termination: edge
+
+resources: {}

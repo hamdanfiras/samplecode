@@ -1,0 +1,23 @@
+# Example override file showing common production-style values.
+
+replicaCount: 2
+
+image:
+  repository: quay.io/openshift/origin-hello-openshift
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+route:
+  enabled: true
+  host: ""
+  tls:
+    enabled: true
+    termination: edge
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 250m
+    memory: 256Mi

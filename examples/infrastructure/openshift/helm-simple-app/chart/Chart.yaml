@@ -1,0 +1,6 @@
+apiVersion: v2
+name: openshift-simple-app
+description: A minimal Helm chart for deploying a simple app on OpenShift
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
