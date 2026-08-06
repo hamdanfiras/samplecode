@@ -7,3 +7,4 @@ Examples:
 - `curl/api-requests/`
 - `jq/json-filtering/`
 - `git/common-workflows/`
+- `powershell/download-github-archive/`
