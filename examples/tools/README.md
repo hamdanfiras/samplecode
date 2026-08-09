@@ -8,3 +8,4 @@ Examples:
 - `jq/json-filtering/`
 - `git/common-workflows/`
 - `powershell/download-github-archive/`
+- `powershell/memory-leak-test/`
