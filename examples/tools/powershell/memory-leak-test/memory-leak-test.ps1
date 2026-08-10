@@ -4,7 +4,8 @@ param(
 
     [Parameter(Mandatory = $false)]
     [ValidateRange(1,2147483647)]
-    [int]$Pid,
+    [Alias("Pid")]
+    [int]$ProcessId,
 
     [Parameter(Mandatory = $false)]
     [string]$Url,
@@ -27,7 +28,7 @@ param(
 function Show-Help {
 
 @"
-================================================================================
+        ================================================================================
 Memory Leak Test Helper
 ================================================================================
 
@@ -46,13 +47,16 @@ The generated heap dumps can then be compared using Eclipse MAT.
 USAGE
 -----
 
-    .\memory-leak-test.ps1 -Pid <pid> -Url <url>
+    .\memory-leak-test.ps1 -ProcessId <pid> -Url <url>
 
 REQUIRED PARAMETERS
 -------------------
 
--Pid
+-ProcessId
     Java process ID.
+
+    Alias:
+        -Pid
 
 -Url
     URL to invoke.
@@ -106,20 +110,20 @@ EXAMPLES
 GET
 
     .\memory-leak-test.ps1 `
-        -Pid 12345 `
+        -ProcessId 12345 `
         -Url http://localhost:8080/api/orders
 
 GET 500 Calls
 
     .\memory-leak-test.ps1 `
-        -Pid 12345 `
+        -ProcessId 12345 `
         -Url http://localhost:8080/api/orders `
         -Calls 500
 
 POST
 
     .\memory-leak-test.ps1 `
-        -Pid 12345 `
+        -ProcessId 12345 `
         -Method POST `
         -Url http://localhost:8080/api/orders `
         -Body '{"name":"John"}'
@@ -127,7 +131,7 @@ POST
 Custom Output Folder
 
     .\memory-leak-test.ps1 `
-        -Pid 12345 `
+        -ProcessId 12345 `
         -Url http://localhost:8080/api/orders `
         -OutputDir D:\HeapDumps
 
@@ -153,8 +157,8 @@ if ($Help) {
     exit 0
 }
 
-if (-not $Pid) {
-    Write-Host "Missing required parameter: -Pid"
+if (-not $ProcessId) {
+    Write-Host "Missing required parameter: -ProcessId"
     Write-Host "Run with -Help for usage."
     exit 1
 }
@@ -170,9 +174,9 @@ $ErrorActionPreference = "Stop"
 function Invoke-Jcmd {
     param([string[]]$Arguments)
 
-    Write-Host "jcmd $Pid $($Arguments -join ' ')"
+    Write-Host "jcmd $ProcessId $($Arguments -join ' ')"
 
-    & $Jcmd $Pid @Arguments
+    & $Jcmd $ProcessId @Arguments
 
     if ($LASTEXITCODE -ne 0) {
         throw "jcmd failed."
@@ -227,7 +231,7 @@ Write-Host ""
 Write-Host "==============================================="
 Write-Host " Memory Leak Test"
 Write-Host "==============================================="
-Write-Host "PID       : $Pid"
+Write-Host "PID       : $ProcessId"
 Write-Host "URL       : $Url"
 Write-Host "Method    : $Method"
 Write-Host "Calls     : $Calls"

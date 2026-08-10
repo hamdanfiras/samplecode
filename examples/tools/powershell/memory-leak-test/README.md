@@ -20,14 +20,14 @@ The script:
 ## Usage
 
 ```powershell
-pwsh .\memory-leak-test.ps1 -Pid 12345 -Url http://localhost:8080/dummy/leak/heap?mb=50
+pwsh .\memory-leak-test.ps1 -ProcessId 12345 -Url http://localhost:8080/dummy/leak/heap?mb=50
 ```
 
 Run more calls:
 
 ```powershell
 pwsh .\memory-leak-test.ps1 `
-    -Pid 12345 `
+    -ProcessId 12345 `
     -Url http://localhost:8080/dummy/leak/heap?mb=50 `
     -Calls 500
 ```
@@ -36,7 +36,7 @@ Send a POST request:
 
 ```powershell
 pwsh .\memory-leak-test.ps1 `
-    -Pid 12345 `
+    -ProcessId 12345 `
     -Method POST `
     -Url http://localhost:8080/dummy/reset
 ```
@@ -45,7 +45,7 @@ Write heap dumps to a custom folder:
 
 ```powershell
 pwsh .\memory-leak-test.ps1 `
-    -Pid 12345 `
+    -ProcessId 12345 `
     -Url http://localhost:8080/dummy/leak/heap?mb=50 `
     -OutputDir D:\HeapDumps
 ```
@@ -60,3 +60,5 @@ By default, heap dumps are written to `.\heap-dumps`:
 ```
 
 Use `-Help` to print the full script help.
+
+`-Pid` is still accepted as an alias for `-ProcessId`.
