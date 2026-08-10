@@ -172,7 +172,10 @@ if ([string]::IsNullOrWhiteSpace($Url)) {
 $ErrorActionPreference = "Stop"
 
 function Invoke-Jcmd {
-    param([string[]]$Arguments)
+    param(
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [string[]]$Arguments
+    )
 
     Write-Host "jcmd $ProcessId $($Arguments -join ' ')"
 
