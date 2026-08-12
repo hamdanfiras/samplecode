@@ -9,3 +9,4 @@ Examples:
 - `git/common-workflows/`
 - `powershell/download-github-archive/`
 - `powershell/memory-leak-test/`
+- `powershell/swagger-endpoint-counts/`
