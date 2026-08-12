@@ -20,7 +20,10 @@ param(
 
     [Parameter(Mandatory = $false)]
     [ValidateRange(1, 3600)]
-    [int] $TimeoutSeconds = 60
+    [int] $TimeoutSeconds = 60,
+
+    [Parameter(Mandatory = $false)]
+    [switch] $NoProxy
 )
 
 $ErrorActionPreference = "Stop"
@@ -92,6 +95,9 @@ PARAMETERS
 
     Default:
       60
+
+-NoProxy
+    Do not use a proxy when downloading Swagger/OpenAPI documents.
 
 ================================================================================
 "@
@@ -283,7 +289,16 @@ foreach ($source in $sources) {
     Write-Host "Reading $($source.Key): $($source.Url)"
 
     try {
-        $response = Invoke-WebRequest -Uri $source.Url -TimeoutSec $TimeoutSeconds
+        $requestParameters = @{
+            Uri = $source.Url
+            TimeoutSec = $TimeoutSeconds
+        }
+
+        if ($NoProxy) {
+            $requestParameters.NoProxy = $true
+        }
+
+        $response = Invoke-WebRequest @requestParameters
         $document = $response.Content | ConvertFrom-Json
         $endpointCount = Get-OpenApiOperationCount -Document $document
     }

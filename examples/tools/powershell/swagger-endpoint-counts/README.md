@@ -55,6 +55,14 @@ pwsh .\count-swagger-endpoints.ps1 `
     -TimeoutSeconds 120
 ```
 
+Bypass proxy settings when downloading Swagger/OpenAPI documents:
+
+```powershell
+pwsh .\count-swagger-endpoints.ps1 `
+    -InputJsonPath .\swaggers.json `
+    -NoProxy
+```
+
 ## Output
 
 The output file contains two columns:
