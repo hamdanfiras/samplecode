@@ -1,0 +1,13 @@
+apiVersion: v2
+name: minio-vault
+description: OpenShift GitOps MinIO sample using Vault CSI file-mounted credentials
+type: application
+version: 0.1.0
+appVersion: RELEASE.2025-09-07T16-13-09Z-cpuv1
+keywords:
+  - openshift
+  - argocd
+  - gitops
+  - helm
+  - minio
+  - vault

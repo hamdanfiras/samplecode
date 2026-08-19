@@ -1,0 +1,45 @@
+{{- if and .Values.route.enabled .Values.route.api.enabled }}
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ include "minio-vault.fullname" . }}-api
+  labels:
+    {{- include "minio-vault.labels" . | nindent 4 }}
+spec:
+  {{- if .Values.route.api.host }}
+  host: {{ .Values.route.api.host | quote }}
+  {{- end }}
+  to:
+    kind: Service
+    name: {{ include "minio-vault.fullname" . }}
+  port:
+    targetPort: api
+  {{- if .Values.route.tls.enabled }}
+  tls:
+    termination: {{ .Values.route.tls.termination }}
+    insecureEdgeTerminationPolicy: {{ .Values.route.tls.insecureEdgeTerminationPolicy }}
+  {{- end }}
+---
+{{- end }}
+{{- if and .Values.route.enabled .Values.route.console.enabled }}
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ include "minio-vault.fullname" . }}-console
+  labels:
+    {{- include "minio-vault.labels" . | nindent 4 }}
+spec:
+  {{- if .Values.route.console.host }}
+  host: {{ .Values.route.console.host | quote }}
+  {{- end }}
+  to:
+    kind: Service
+    name: {{ include "minio-vault.fullname" . }}
+  port:
+    targetPort: console
+  {{- if .Values.route.tls.enabled }}
+  tls:
+    termination: {{ .Values.route.tls.termination }}
+    insecureEdgeTerminationPolicy: {{ .Values.route.tls.insecureEdgeTerminationPolicy }}
+  {{- end }}
+{{- end }}

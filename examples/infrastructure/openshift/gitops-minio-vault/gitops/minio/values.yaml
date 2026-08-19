@@ -1,0 +1,80 @@
+replicaCount: 1
+
+image:
+  repository: quay.io/minio/minio
+  tag: RELEASE.2025-09-07T16-13-09Z-cpuv1
+  pullPolicy: IfNotPresent
+
+mcImage:
+  repository: quay.io/minio/mc
+  tag: RELEASE.2025-08-13T08-35-41Z-cpuv1
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  apiPort: 9000
+  consolePort: 9001
+
+route:
+  enabled: true
+  api:
+    enabled: true
+    host: ""
+  console:
+    enabled: true
+    host: ""
+  tls:
+    enabled: true
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+
+persistence:
+  enabled: true
+  storageClassName: ""
+  size: 20Gi
+  accessModes:
+    - ReadWriteOnce
+
+vault:
+  enabled: true
+  roleName: minio
+  vaultAddress: ""
+  secretPath: secret/data/openshift/minio
+  mountPath: /mnt/secrets-store
+  files:
+    rootUser: root_user
+    rootPassword: root_password
+    serviceUser: service_user
+    servicePassword: service_password
+  keys:
+    rootUser: rootUser
+    rootPassword: rootPassword
+    serviceUser: serviceUser
+    servicePassword: servicePassword
+
+minio:
+  siteRegion: us-east-1
+  browser: "on"
+
+init:
+  enabled: true
+  backoffLimit: 4
+  ttlSecondsAfterFinished: 600
+  minioAlias: local
+  buckets:
+    userAssets: user-assets
+    publicAssets: public-assets
+  policies:
+    userAssetsReadWrite: user-assets-rw
+    publicAssetsReadWrite: public-assets-rw
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 512Mi
+  limits:
+    memory: 1Gi
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

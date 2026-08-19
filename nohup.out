@@ -1,0 +1,749 @@
+Created TensorFlow Lite XNNPACK delegate for CPU.
+[20916:311631:0813/193011.858510:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20916:311631:0813/193011.893803:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Trying to load the allocator multiple times. This is *not* supported.
+[20916:311645:0813/193017.263579:ERROR:base/process/process_mac.cc:53] task_policy_set TASK_CATEGORY_POLICY: (os/kern) invalid argument (4)
+[20916:311645:0813/193017.263627:ERROR:base/process/process_mac.cc:98] task_policy_set TASK_SUPPRESSION_POLICY: (os/kern) invalid argument (4)
+[20994:312558:0813/193028.266247:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake-all --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[20994:312558:0813/193028.266732:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 11985, parent pid: 20916
+[20994:312558:0813/193028.268248:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 162407718912B (151.254GiB) / 494384795648B (460.432GiB)
+[20994:312558:0813/193028.268261:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 162407718912B (151.254GiB) / 494384795648B (460.432GiB)
+[20994:312558:0813/193028.268320:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[20996:312562:0813/193028.279161:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[20996:312562:0813/193028.279750:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 11985, parent pid: 1
+[20996:312562:0813/193028.281051:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 162407714816B (151.254GiB) / 494384795648B (460.432GiB)
+[20996:312562:0813/193028.281063:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 162407714816B (151.254GiB) / 494384795648B (460.432GiB)
+[20996:312562:0813/193028.281118:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[20994:312558:0813/193028.281440:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[20994:312558:0813/193028.281946:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[20994:312558:0813/193028.282015:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[20994:312558:0813/193028.282080:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[20994:312558:0813/193028.282091:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Measurement/Crashpad/settings.dat: No such file or directory (2)
+[20994:312558:0813/193028.282099:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Chrome for Testing/Crashpad/settings.dat: No such file or directory (2)
+[20994:312558:0813/193028.282112:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RemoteConfig/Crashpad/settings.dat: No such file or directory (2)
+[20994:312558:0813/193028.282142:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/ChromeForTesting/Crashpad/settings.dat: No such file or directory (2)
+[20994:312558:0813/193028.282154:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[20994:312570:0813/193028.282364:VERBOSE1:chrome/updater/app/app_wakeall.cc:58] Launching `/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake`
+[20997:312574:0813/193028.289649:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[20997:312574:0813/193028.290036:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 11985, parent pid: 20994
+[20997:312574:0813/193028.291319:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 162407636992B (151.254GiB) / 494384795648B (460.432GiB)
+[20997:312574:0813/193028.291330:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 162407636992B (151.254GiB) / 494384795648B (460.432GiB)
+[20997:312574:0813/193028.291866:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[20999:312578:0813/193028.302094:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[20999:312578:0813/193028.302457:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 11985, parent pid: 1
+[20999:312578:0813/193028.303624:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 162407636992B (151.254GiB) / 494384795648B (460.432GiB)
+[20999:312578:0813/193028.303634:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 162407636992B (151.254GiB) / 494384795648B (460.432GiB)
+[20999:312578:0813/193028.303687:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[20997:312574:0813/193028.304067:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[20997:312574:0813/193028.304566:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[20997:312574:0813/193028.304627:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[20997:312574:0813/193028.304689:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[20997:312574:0813/193028.304698:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Measurement/Crashpad/settings.dat: No such file or directory (2)
+[20997:312574:0813/193028.304705:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Chrome for Testing/Crashpad/settings.dat: No such file or directory (2)
+[20997:312574:0813/193028.304719:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RemoteConfig/Crashpad/settings.dat: No such file or directory (2)
+[20997:312574:0813/193028.304747:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/ChromeForTesting/Crashpad/settings.dat: No such file or directory (2)
+[20997:312574:0813/193028.304760:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[20997:312574:0813/193028.304880:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[20916:311631:0813/193036.763254:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20916:311631:0813/193041.056803:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20997:312574:0813/193045.825599:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[20997:312574:0813/193045.826015:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[20997:312574:0813/193045.826043:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake) returned 0.
+[20994:312570:0813/193045.900777:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+[20994:312558:0813/193045.901081:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[20994:312558:0813/193045.901837:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[20994:312558:0813/193045.901882:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake-all) returned 0.
+[20999:312578:0813/193055.832489:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[20999:312578:0813/193055.832510:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[20996:312562:0813/193055.833476:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[20996:312562:0813/193055.833520:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[20916:311631:0813/193134.306404:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20916:311631:0813/193139.765807:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20916:311631:0813/193304.199406:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20916:311631:0813/193319.690117:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20924:311685:0813/193610.944661:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.424969:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.427207:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.508800:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.510958:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.512905:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.513193:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.584778:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.586328:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.587630:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.588911:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.589072:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.589166:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.590296:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.591367:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.664794:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.667267:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.669978:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.671534:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.672968:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.674397:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.676420:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.678027:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.679392:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.757476:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.757792:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.760046:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.761248:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.762124:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.762680:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.763221:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.763750:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.792376:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.866708:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.868979:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.870750:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.872433:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.874254:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.875493:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.904947:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.973741:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.976700:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.978437:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.980073:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.981293:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193611.982740:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.045953:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.065519:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.067702:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.069456:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.071068:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.072591:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.074215:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.145213:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.147431:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.149174:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.150549:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.151796:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.153109:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.219380:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.222602:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.223862:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.225000:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.226227:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.227476:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.308785:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.310961:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.312430:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.314137:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.315758:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.316888:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.388343:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.390799:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.392320:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.393759:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.395082:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.396419:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.514683:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.516697:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.518238:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.519842:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.521208:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.522273:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.601832:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.603459:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.604619:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.605602:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.606484:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.606987:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.686374:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.688099:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.689250:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.690112:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.690668:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.691139:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.744730:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.751403:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.752182:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.752595:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.752868:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.753146:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.822097:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.822775:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.823094:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.823525:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.823822:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.824102:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.903083:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.904193:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.904645:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.904988:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.905294:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.906046:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.988198:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.989432:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.990252:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.990916:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.991717:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193612.992368:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.098468:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.100292:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.101352:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.102248:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.102945:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.103354:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.198057:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.199214:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.200475:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.201172:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.201856:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.202401:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.274766:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.277339:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.278094:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.278166:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.278203:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.278236:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.381678:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.462346:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.544846:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.546431:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.628375:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.628585:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.715309:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.810135:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.906718:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193613.979473:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193614.101357:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20924:311685:0813/193614.194510:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[20916:311631:0813/193621.782812:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20916:311631:0813/193640.500458:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20924:311685:0813/193714.925406:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for eu-aa.online-metrix.net., errorcode: -105
+[20924:311685:0813/193714.925463:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for eu-aa.online-metrix.net., errorcode: -105
+[20924:311685:0813/193714.925482:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for eu-aa.online-metrix.net., errorcode: -105
+[21878:320768:0813/193715.135122:ERROR:third_party/webrtc/p2p/base/stun_port.cc:105] Binding error response: class=4 number=1 reason=Unauthorized
+[20916:311631:0813/194211.695472:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20916:311631:0813/194433.263951:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[20923:311647:0813/194805.657950:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.685746:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.687582:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.695909:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.703894:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.713337:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.721150:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.730219:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.745851:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.747806:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.762381:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.769801:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.776783:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.780069:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.795130:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.803752:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.812340:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.820544:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.829210:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.837866:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.846428:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.855520:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.856656:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.873029:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.874936:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.890398:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.895062:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.903439:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.911793:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.920234:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.928664:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.945170:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.953680:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.962023:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.963715:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.971907:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.988728:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.997596:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194805.998881:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.007477:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.017069:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.032703:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.044003:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.053261:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.061979:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.070762:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.079512:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.087606:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.096139:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.097235:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.112631:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.120473:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.129431:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.137240:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.145443:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.153647:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.162680:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.163762:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.181783:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.183812:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.195502:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.203943:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.222234:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.225361:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.238145:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.248604:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.260477:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.277957:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.279795:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.287684:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.295318:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.302879:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.310484:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.325865:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.334876:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.336423:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.350307:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.351364:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.359471:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.368220:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.377200:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.386192:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.394916:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.405077:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.413246:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.422181:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+[20923:311647:0813/194806.432007:ERROR:gpu/command_buffer/service/gl_utils.cc:426] [.WebGL-0x114000f6800] GL_INVALID_OPERATION: glUniform1f: Uniform size does not match uniform method.
+Created TensorFlow Lite XNNPACK delegate for CPU.
+[28435:382484:0813/204920.651015:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Trying to load the allocator multiple times. This is *not* supported.
+[28435:382484:0813/204927.991431:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28547:383791:0813/204937.012954:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake-all --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[28547:383791:0813/204937.013598:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 15441, parent pid: 28435
+[28547:383791:0813/204937.015052:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 162332270592B (151.184GiB) / 494384795648B (460.432GiB)
+[28547:383791:0813/204937.015065:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 162332270592B (151.184GiB) / 494384795648B (460.432GiB)
+[28547:383791:0813/204937.015121:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[28549:383795:0813/204937.024519:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[28549:383795:0813/204937.024935:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 15441, parent pid: 1
+[28549:383795:0813/204937.026387:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 162332266496B (151.184GiB) / 494384795648B (460.432GiB)
+[28549:383795:0813/204937.026401:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 162332266496B (151.184GiB) / 494384795648B (460.432GiB)
+[28549:383795:0813/204937.026466:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[28547:383791:0813/204937.026836:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[28547:383791:0813/204937.027363:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[28547:383791:0813/204937.027440:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[28547:383791:0813/204937.027509:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[28547:383791:0813/204937.027522:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Measurement/Crashpad/settings.dat: No such file or directory (2)
+[28547:383791:0813/204937.027531:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Chrome for Testing/Crashpad/settings.dat: No such file or directory (2)
+[28547:383791:0813/204937.027539:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RemoteConfig/Crashpad/settings.dat: No such file or directory (2)
+[28547:383791:0813/204937.027570:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/ChromeForTesting/Crashpad/settings.dat: No such file or directory (2)
+[28547:383791:0813/204937.027583:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[28547:383804:0813/204937.027805:VERBOSE1:chrome/updater/app/app_wakeall.cc:58] Launching `/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake`
+[28550:383808:0813/204937.036113:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[28550:383808:0813/204937.036480:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 15441, parent pid: 28547
+[28550:383808:0813/204937.037774:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 162332258304B (151.184GiB) / 494384795648B (460.432GiB)
+[28550:383808:0813/204937.037786:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 162332258304B (151.184GiB) / 494384795648B (460.432GiB)
+[28550:383808:0813/204937.037838:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[28552:383812:0813/204937.047449:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[28552:383812:0813/204937.047819:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 15441, parent pid: 1
+[28552:383812:0813/204937.048937:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 162332258304B (151.184GiB) / 494384795648B (460.432GiB)
+[28552:383812:0813/204937.048947:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 162332258304B (151.184GiB) / 494384795648B (460.432GiB)
+[28552:383812:0813/204937.048994:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[28550:383808:0813/204937.049302:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[28550:383808:0813/204937.049815:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[28550:383808:0813/204937.049876:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[28550:383808:0813/204937.049937:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[28550:383808:0813/204937.049948:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Measurement/Crashpad/settings.dat: No such file or directory (2)
+[28550:383808:0813/204937.049955:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Chrome for Testing/Crashpad/settings.dat: No such file or directory (2)
+[28550:383808:0813/204937.049962:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RemoteConfig/Crashpad/settings.dat: No such file or directory (2)
+[28550:383808:0813/204937.049992:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/ChromeForTesting/Crashpad/settings.dat: No such file or directory (2)
+[28550:383808:0813/204937.050003:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[28550:383808:0813/204937.050118:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[28435:382484:0813/204944.090703:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28550:383808:0813/204953.011794:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[28550:383808:0813/204953.014203:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[28550:383808:0813/204953.014291:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake) returned 0.
+[28547:383804:0813/204953.033468:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+[28547:383791:0813/204953.033809:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[28547:383791:0813/204953.034419:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[28547:383791:0813/204953.034466:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake-all) returned 0.
+[28435:382484:0813/204953.313215:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28435:382484:0813/205000.950133:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28552:383812:0813/205003.020714:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[28552:383812:0813/205003.020740:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[28549:383795:0813/205003.021735:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[28549:383795:0813/205003.021771:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[28435:382438:0813/205005.917433:ERROR:CONSOLE:0] "Framing 'https://ogs.google.com/' violates the following report-only Content Security Policy directive: "frame-ancestors 'self'". The violation has been logged, but no further action has been taken.
+", source:  (0)
+[28435:382438:0813/205005.917917:ERROR:CONSOLE:0] "Framing 'https://ogs.google.com/' violates the following report-only Content Security Policy directive: "frame-ancestors 'self'". The violation has been logged, but no further action has been taken.
+", source:  (0)
+[28435:382438:0813/205008.190013:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/205008.190249:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/205009.888485:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/205009.889727:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382484:0813/205037.642736:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28435:382484:0813/205235.421836:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28435:382484:0813/205616.182256:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28443:382522:0813/205903.507642:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.601075:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.603462:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.665089:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.721158:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.726737:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.790446:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.792355:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.827008:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.827135:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.871966:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.923633:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205903.923896:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205904.009451:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205904.080922:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205904.082837:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205904.244378:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205904.244490:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205906.147555:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/205906.273364:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28435:382498:0813/205910.087097:ERROR:base/process/process_mac.cc:53] task_policy_set TASK_CATEGORY_POLICY: (os/kern) invalid argument (4)
+[28435:382498:0813/205910.087306:ERROR:base/process/process_mac.cc:98] task_policy_set TASK_SUPPRESSION_POLICY: (os/kern) invalid argument (4)
+[28435:382484:0813/210327.225342:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28435:382438:0813/210329.957949:ERROR:chrome/browser/ui/views/user_education/impl/browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.
+[28435:382484:0813/210330.505844:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28435:382484:0813/210351.524476:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28435:382498:0813/210437.769055:ERROR:base/process/process_mac.cc:53] task_policy_set TASK_CATEGORY_POLICY: (os/kern) invalid argument (4)
+[28435:382498:0813/210437.769247:ERROR:base/process/process_mac.cc:98] task_policy_set TASK_SUPPRESSION_POLICY: (os/kern) invalid argument (4)
+[28435:382498:0813/210438.620171:ERROR:base/process/process_mac.cc:53] task_policy_set TASK_CATEGORY_POLICY: (os/kern) invalid argument (4)
+[28435:382498:0813/210438.620199:ERROR:base/process/process_mac.cc:98] task_policy_set TASK_SUPPRESSION_POLICY: (os/kern) invalid argument (4)
+[28443:382522:0813/210446.249916:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -100
+[28443:382522:0813/210446.494193:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -100
+[28435:382498:0813/210447.761969:ERROR:base/process/process_mac.cc:98] task_policy_set TASK_SUPPRESSION_POLICY: (os/kern) invalid argument (4)
+[28435:382484:0813/210451.879866:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28435:382484:0813/210620.934041:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28435:382484:0813/210934.433253:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[30246:419982:0813/211543.537432:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[30246:419982:0813/211543.537516:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[30246:419982:0813/211543.754932:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport0->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[30246:419982:0813/211649.133580:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:551] DcSctpTransport0->OnError(error=UNSUPPORTED_OPERATION, message=Can't reset streams as the peer doesn't support it).
+[28435:382484:0813/211652.442165:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[28442:382500:0813/211952.379754:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[28442:382500:0813/211952.379806:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[28442:382500:0813/211952.382468:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[28442:382500:0813/211952.382499:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[28442:382500:0813/211952.412288:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[28442:382500:0813/211952.412306:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[30246:419982:0813/212241.013494:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[30246:419982:0813/212241.013554:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[30246:419982:0813/212241.234331:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport1->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[28442:382500:0813/212325.395451:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[28442:382500:0813/212325.395513:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[30246:419982:0813/212340.180918:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:551] DcSctpTransport1->OnError(error=UNSUPPORTED_OPERATION, message=Can't reset streams as the peer doesn't support it).
+[28442:382500:0813/212419.144523:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[28442:382500:0813/212419.144588:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[28442:382500:0813/212426.154040:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[28442:382500:0813/212426.154083:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[28442:382500:0813/212426.154096:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[28442:382500:0813/212426.154102:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[30246:419982:0813/212427.014032:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[30246:419982:0813/212427.014083:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[30246:419982:0813/212427.199114:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport2->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[30246:419982:0813/212544.305489:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[30246:419982:0813/212544.305545:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[30246:419982:0813/212544.521064:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport3->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[28443:382522:0813/212637.580175:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.cloudflare.com., errorcode: -105
+[28443:382522:0813/212637.580207:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.cloudflare.com., errorcode: -105
+[28443:382522:0813/212637.580216:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.cloudflare.com., errorcode: -105
+[28443:382522:0813/212637.610850:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.l.google.com., errorcode: -105
+[28443:382522:0813/212637.610905:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.l.google.com., errorcode: -105
+[28443:382522:0813/212637.610917:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.l.google.com., errorcode: -105
+[28443:382522:0813/212637.610929:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun1.l.google.com., errorcode: -105
+[28443:382522:0813/212637.610939:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun1.l.google.com., errorcode: -105
+[28443:382522:0813/212637.610946:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun1.l.google.com., errorcode: -105
+[28443:382522:0813/212637.831652:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.cloudflare.com., errorcode: -105
+[28443:382522:0813/212637.831694:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.cloudflare.com., errorcode: -105
+[28443:382522:0813/212637.831703:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.cloudflare.com., errorcode: -105
+[28443:382522:0813/212637.832097:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.l.google.com., errorcode: -105
+[28443:382522:0813/212637.832108:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.l.google.com., errorcode: -105
+[28443:382522:0813/212637.832116:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun.l.google.com., errorcode: -105
+[28443:382522:0813/212637.832126:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun1.l.google.com., errorcode: -105
+[28443:382522:0813/212637.832133:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun1.l.google.com., errorcode: -105
+[28443:382522:0813/212637.832139:ERROR:services/network/p2p/socket_manager.cc:143] Failed to resolve address for stun1.l.google.com., errorcode: -105
+[30246:419982:0813/212643.434212:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:551] DcSctpTransport3->OnError(error=UNSUPPORTED_OPERATION, message=Can't reset streams as the peer doesn't support it).
+[28443:382522:0813/212644.072992:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212644.192645:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212644.297015:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212644.463693:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212727.864659:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212728.024369:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212728.099249:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212728.229544:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212729.313988:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212729.393890:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212729.545543:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212729.629162:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212730.033821:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212730.123062:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212802.758055:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212802.987395:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212803.024090:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/212803.235932:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28435:382484:0813/213055.409754:ERROR:google_apis/gcm/engine/connection_factory_impl.cc:484] ConnectionHandler failed with net error: -2
+[28443:382522:0813/213206.248648:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213206.510037:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213206.545540:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213206.752648:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213228.382221:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213228.513773:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213228.629057:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213228.810910:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213229.342691:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213229.394132:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213229.775089:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213229.823791:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213230.256677:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213230.298890:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28435:382438:0813/213233.103273:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/213233.104134:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28443:382522:0813/213432.228350:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213432.388878:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213446.892146:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213447.035613:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213616.816465:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213617.016621:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213617.061204:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/213617.241296:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214440.265735:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214440.436231:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214440.437960:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214440.606746:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214440.986654:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214441.149823:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214441.230084:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214441.411447:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214441.730991:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214441.892147:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214441.985176:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214442.117045:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214442.526549:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214442.663398:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214442.778805:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214442.941905:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214443.342026:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214443.486714:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214443.583555:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214443.787820:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214444.176635:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214444.321776:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214444.461781:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214444.613996:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214445.096622:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214445.258535:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214445.339515:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214445.493624:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214446.092253:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214446.254144:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214446.288766:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214446.293140:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214446.446504:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214446.448670:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214446.528745:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214446.683446:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214447.611497:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214447.771518:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214447.936616:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214448.093272:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214448.168746:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214448.307013:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214453.253543:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214453.422967:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214453.561678:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28443:382522:0813/214453.697887:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[OpenH264] this = 0x0x13400dcb7f0, Warning:layerId(0) doesn't support profile(88), change to UNSPECIFIC profile
+[OpenH264] this = 0x0x11401fdd7a0, Warning:layerId(0) doesn't support profile(88), change to UNSPECIFIC profile
+[28443:382522:0813/214708.178924:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -100
+[28443:382522:0813/215420.231733:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[28435:382484:0813/221850.802579:ERROR:google_apis/gcm/engine/connection_factory_impl.cc:484] ConnectionHandler failed with net error: -2
+[28435:382484:0813/221850.803009:ERROR:google_apis/gcm/engine/connection_factory_impl.cc:484] ConnectionHandler failed with net error: -2
+[30246:419982:0813/222011.484430:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[30246:419982:0813/222011.484496:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[30246:419982:0813/222011.713330:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport4->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[28442:382500:0813/222103.715220:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[28442:382500:0813/222103.715280:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[30246:419982:0813/222113.235349:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:551] DcSctpTransport4->OnError(error=UNSUPPORTED_OPERATION, message=Can't reset streams as the peer doesn't support it).
+[30246:419982:0813/222213.357165:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[30246:419982:0813/222213.357219:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[30246:419982:0813/222213.556803:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport5->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[28435:382438:0813/222309.204805:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222309.206438:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222429.094210:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222429.094909:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222429.962991:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222429.963863:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222432.144779:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222432.144961:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222512.575177:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222525.247106:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+[28435:382438:0813/222525.247409:ERROR:chrome/browser/ui/webui/ntp/new_tab_ui.cc:54] Requested load of chrome://newtab/ for incorrect profile type.
+Created TensorFlow Lite XNNPACK delegate for CPU.
+[41215:520012:0813/222619.858883:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41215:520012:0813/222619.908747:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Trying to load the allocator multiple times. This is *not* supported.
+[41282:520974:0813/222636.205895:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake-all --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[41282:520974:0813/222636.206466:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 21202, parent pid: 41215
+[41282:520974:0813/222636.208292:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 158393671680B (147.516GiB) / 494384795648B (460.432GiB)
+[41282:520974:0813/222636.208308:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 158393671680B (147.516GiB) / 494384795648B (460.432GiB)
+[41282:520974:0813/222636.208379:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[41284:520978:0813/222636.218733:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[41284:520978:0813/222636.219178:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 21202, parent pid: 1
+[41284:520978:0813/222636.220629:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 158393671680B (147.516GiB) / 494384795648B (460.432GiB)
+[41284:520978:0813/222636.220642:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 158393671680B (147.516GiB) / 494384795648B (460.432GiB)
+[41284:520978:0813/222636.220707:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[41282:520974:0813/222636.221116:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[41282:520974:0813/222636.221666:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[41282:520974:0813/222636.221734:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[41282:520974:0813/222636.221816:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[41282:520974:0813/222636.221830:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Measurement/Crashpad/settings.dat: No such file or directory (2)
+[41282:520974:0813/222636.221840:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Chrome for Testing/Crashpad/settings.dat: No such file or directory (2)
+[41282:520974:0813/222636.221850:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RemoteConfig/Crashpad/settings.dat: No such file or directory (2)
+[41282:520974:0813/222636.221891:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/ChromeForTesting/Crashpad/settings.dat: No such file or directory (2)
+[41282:520974:0813/222636.221908:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[41282:520986:0813/222636.222206:VERBOSE1:chrome/updater/app/app_wakeall.cc:58] Launching `/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake`
+[41285:520990:0813/222636.230501:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[41285:520990:0813/222636.230974:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 21202, parent pid: 41282
+[41285:520990:0813/222636.232401:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 158393667584B (147.516GiB) / 494384795648B (460.432GiB)
+[41285:520990:0813/222636.232415:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 158393667584B (147.516GiB) / 494384795648B (460.432GiB)
+[41285:520990:0813/222636.232475:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[41287:520994:0813/222636.241968:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[41287:520994:0813/222636.242440:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 21202, parent pid: 1
+[41287:520994:0813/222636.243848:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 158393667584B (147.516GiB) / 494384795648B (460.432GiB)
+[41287:520994:0813/222636.243862:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 158393667584B (147.516GiB) / 494384795648B (460.432GiB)
+[41287:520994:0813/222636.243928:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[41285:520990:0813/222636.244326:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[41285:520990:0813/222636.244864:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[41285:520990:0813/222636.244927:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[41285:520990:0813/222636.245003:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[41285:520990:0813/222636.245015:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Measurement/Crashpad/settings.dat: No such file or directory (2)
+[41285:520990:0813/222636.245025:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Chrome for Testing/Crashpad/settings.dat: No such file or directory (2)
+[41285:520990:0813/222636.245035:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RemoteConfig/Crashpad/settings.dat: No such file or directory (2)
+[41285:520990:0813/222636.245071:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/ChromeForTesting/Crashpad/settings.dat: No such file or directory (2)
+[41285:520990:0813/222636.245087:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[41285:520990:0813/222636.245233:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[41215:520012:0813/222646.889368:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41215:520012:0813/222649.232428:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41285:520990:0813/222652.005327:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[41285:520990:0813/222652.005939:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[41285:520990:0813/222652.005970:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake) returned 0.
+[41282:520986:0813/222652.234114:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+[41282:520974:0813/222652.234316:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[41282:520974:0813/222652.234793:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[41282:520974:0813/222652.234824:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake-all) returned 0.
+[41287:520994:0813/222702.024806:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[41287:520994:0813/222702.024862:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[41284:520978:0813/222702.027257:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[41284:520978:0813/222702.027302:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[41215:520012:0813/222740.120035:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41215:520012:0813/222742.999267:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41215:520012:0813/222905.995764:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41215:520012:0813/222932.712837:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41215:520012:0813/223304.476008:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41215:520012:0813/223315.572402:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41215:520012:0813/223935.085477:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41215:520012:0813/224054.046721:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[41246:545759:0813/224503.477793:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[41246:545759:0813/224503.478009:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[41246:545759:0813/224503.667626:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport0->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[41246:545759:0813/224522.292887:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[41246:545759:0813/224522.292935:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[41246:545759:0813/224522.482362:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport1->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[41215:520027:0813/224940.466610:ERROR:base/process/process_mac.cc:53] task_policy_set TASK_CATEGORY_POLICY: (os/kern) invalid argument (4)
+[41215:520027:0813/224940.466655:ERROR:base/process/process_mac.cc:98] task_policy_set TASK_SUPPRESSION_POLICY: (os/kern) invalid argument (4)
+Created TensorFlow Lite XNNPACK delegate for CPU.
+Trying to load the allocator multiple times. This is *not* supported.
+[46861:591486:0814/084355.609879:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46935:592590:0814/084411.754990:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake-all --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[46935:592590:0814/084411.755861:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 23940, parent pid: 46861
+[46935:592590:0814/084411.757890:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 159548575744B (148.591GiB) / 494384795648B (460.432GiB)
+[46935:592590:0814/084411.757907:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 159548575744B (148.591GiB) / 494384795648B (460.432GiB)
+[46935:592590:0814/084411.757989:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[46937:592594:0814/084411.772745:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[46937:592594:0814/084411.773697:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 23941, parent pid: 1
+[46937:592594:0814/084411.775810:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 159548366848B (148.591GiB) / 494384795648B (460.432GiB)
+[46937:592594:0814/084411.775824:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 159548366848B (148.591GiB) / 494384795648B (460.432GiB)
+[46937:592594:0814/084411.775896:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[46935:592590:0814/084411.776328:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[46935:592590:0814/084411.776890:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[46935:592590:0814/084411.776952:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[46935:592590:0814/084411.777022:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[46935:592590:0814/084411.777033:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Measurement/Crashpad/settings.dat: No such file or directory (2)
+[46935:592590:0814/084411.777052:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Chrome for Testing/Crashpad/settings.dat: No such file or directory (2)
+[46935:592590:0814/084411.777059:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RemoteConfig/Crashpad/settings.dat: No such file or directory (2)
+[46935:592590:0814/084411.777091:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/ChromeForTesting/Crashpad/settings.dat: No such file or directory (2)
+[46935:592590:0814/084411.777106:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[46935:592602:0814/084411.777355:VERBOSE1:chrome/updater/app/app_wakeall.cc:58] Launching `/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake`
+[46938:592606:0814/084411.786916:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[46938:592606:0814/084411.787433:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 23941, parent pid: 46935
+[46938:592606:0814/084411.789308:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 159548313600B (148.591GiB) / 494384795648B (460.432GiB)
+[46938:592606:0814/084411.789329:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 159548313600B (148.591GiB) / 494384795648B (460.432GiB)
+[46938:592606:0814/084411.789442:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[46940:592610:0814/084411.801706:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[46940:592610:0814/084411.802212:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.5.2, arch: arm64, System uptime (seconds): 23941, parent pid: 1
+[46940:592610:0814/084411.803833:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/firas/Library/Application Support/Google/GoogleUpdater): 159548313600B (148.591GiB) / 494384795648B (460.432GiB)
+[46940:592610:0814/084411.803846:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/t9/k2_1nj7d3wj8t8__4hwf_nbc0000gn/T/): 159548313600B (148.591GiB) / 494384795648B (460.432GiB)
+[46940:592610:0814/084411.803915:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[46938:592606:0814/084411.804358:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[46938:592606:0814/084411.804987:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[46938:592606:0814/084411.805056:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[46938:592606:0814/084411.805139:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[46938:592606:0814/084411.805151:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Measurement/Crashpad/settings.dat: No such file or directory (2)
+[46938:592606:0814/084411.805159:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/Chrome for Testing/Crashpad/settings.dat: No such file or directory (2)
+[46938:592606:0814/084411.805165:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/RemoteConfig/Crashpad/settings.dat: No such file or directory (2)
+[46938:592606:0814/084411.805208:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/firas/Library/Application Support/Google/ChromeForTesting/Crashpad/settings.dat: No such file or directory (2)
+[46938:592606:0814/084411.805222:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[46938:592606:0814/084411.805387:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[46861:591486:0814/084418.618964:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46861:591486:0814/084444.331720:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46938:592606:0814/084506.907760:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[46938:592606:0814/084506.909139:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[46938:592606:0814/084506.909185:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake) returned 0.
+[46935:592602:0814/084507.170600:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/Users/firas/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+[46935:592590:0814/084507.170864:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[46935:592590:0814/084507.171296:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[46935:592590:0814/084507.171317:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake-all) returned 0.
+[46861:591486:0814/084510.491098:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46861:591486:0814/084514.505816:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46940:592610:0814/084516.917132:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[46940:592610:0814/084516.917159:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[46937:592594:0814/084516.918244:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[46937:592594:0814/084516.918274:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[46861:591486:0814/084604.761650:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46861:591486:0814/084639.154063:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+[46861:591486:0814/084738.407732:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46861:591486:0814/085109.857093:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[47016:619606:0814/085740.712065:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[47016:619606:0814/085740.712363:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[47016:619606:0814/085740.903660:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport0->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[46868:591501:0814/085752.384774:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[46868:591501:0814/085752.384805:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[46868:591501:0814/085752.384831:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:370] SharedImageManager::ProduceOverlay: Trying to Produce a Overlay representation from a non-existent mailbox.
+[46868:591501:0814/085752.384839:ERROR:components/viz/service/display_embedder/skia_output_device_buffer_queue.cc:258] Invalid mailbox.
+[46861:591486:0814/085817.776923:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[47016:619606:0814/085858.763854:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:551] DcSctpTransport0->OnError(error=UNSUPPORTED_OPERATION, message=Can't reset streams as the peer doesn't support it).
+[47016:619606:0814/090135.280312:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[47016:619606:0814/090135.280467:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[47016:619606:0814/090135.819305:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport1->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[47016:619606:0814/090234.133425:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:551] DcSctpTransport1->OnError(error=UNSUPPORTED_OPERATION, message=Can't reset streams as the peer doesn't support it).
+[47016:619606:0814/090314.680527:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[47016:619606:0814/090314.680753:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[47016:619606:0814/090314.865597:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport2->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[47016:619606:0814/090344.227896:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[47016:619606:0814/090344.227961:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[47016:619606:0814/090344.422108:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport3->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[49883:628802:0814/090502.116303:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[49883:628802:0814/090502.116817:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[49883:628802:0814/090502.305305:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport0->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[47016:619606:0814/090512.598267:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:551] DcSctpTransport3->OnError(error=UNSUPPORTED_OPERATION, message=Can't reset streams as the peer doesn't support it).
+[47016:619606:0814/090944.288920:ERROR:third_party/webrtc/pc/dtls_transport.cc:114] DtlsTransport in connected state has incomplete TLS information
+[47016:619606:0814/090944.289131:ERROR:third_party/webrtc/pc/dtls_srtp_transport.cc:241] No DTLS-SRTP selected crypto suite
+[47016:619606:0814/090944.475428:ERROR:third_party/webrtc/media/sctp/dcsctp_transport.cc:454] DcSctpTransport4->SendPacket(...): SCTP seems to have made a packet that is bigger than its official MTU: 1364 vs max of 1191
+[46861:591441:0814/091401.510052:ERROR:mojo/public/cpp/bindings/lib/interface_endpoint_client.cc:748] Message 6 rejected by interface blink.mojom.WidgetHost
+[46861:591441:0814/091401.510267:ERROR:mojo/public/cpp/bindings/lib/interface_endpoint_client.cc:748] Message 7 rejected by interface blink.mojom.WidgetHost
+[46861:591486:0814/091401.839669:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46861:591499:0814/091409.770349:ERROR:base/process/process_mac.cc:53] task_policy_set TASK_CATEGORY_POLICY: (os/kern) invalid argument (4)
+[46861:591499:0814/091409.770628:ERROR:base/process/process_mac.cc:98] task_policy_set TASK_SUPPRESSION_POLICY: (os/kern) invalid argument (4)
+[46869:591522:0814/091411.458207:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[46869:591522:0814/091411.578942:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -101
+[46861:591486:0814/091428.874824:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46861:591486:0814/091518.638122:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[46869:591522:0814/091653.884706:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -202
+[46869:591522:0814/091653.889330:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -202
+[46869:591522:0814/091653.890005:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -202
+[46869:591522:0814/091653.910015:ERROR:net/socket/ssl_client_socket_impl.cc:964] handshake failed; returned -1, SSL error code 1, net_error -202

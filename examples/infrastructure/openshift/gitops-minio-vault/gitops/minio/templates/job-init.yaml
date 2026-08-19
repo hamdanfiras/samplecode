@@ -1,0 +1,83 @@
+{{- if .Values.init.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "minio-vault.fullname" . }}-init
+  labels:
+    {{- include "minio-vault.labels" . | nindent 4 }}
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation,HookSucceeded
+spec:
+  backoffLimit: {{ .Values.init.backoffLimit }}
+  ttlSecondsAfterFinished: {{ .Values.init.ttlSecondsAfterFinished }}
+  template:
+    metadata:
+      labels:
+        {{- include "minio-vault.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: init
+    spec:
+      restartPolicy: Never
+      serviceAccountName: {{ include "minio-vault.fullname" . }}
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: init-minio
+          image: "{{ .Values.mcImage.repository }}:{{ .Values.mcImage.tag }}"
+          imagePullPolicy: {{ .Values.mcImage.pullPolicy }}
+          command:
+            - /bin/sh
+            - /config/init-minio.sh
+          env:
+            - name: MINIO_ENDPOINT
+              value: {{ printf "http://%s:%v" (include "minio-vault.fullname" .) .Values.service.apiPort | quote }}
+            - name: MINIO_ALIAS
+              value: {{ .Values.init.minioAlias | quote }}
+            - name: VAULT_MOUNT_PATH
+              value: {{ .Values.vault.mountPath | quote }}
+            - name: MINIO_ROOT_USER_FILE_NAME
+              value: {{ .Values.vault.files.rootUser | quote }}
+            - name: MINIO_ROOT_PASSWORD_FILE_NAME
+              value: {{ .Values.vault.files.rootPassword | quote }}
+            - name: MINIO_SERVICE_USER_FILE_NAME
+              value: {{ .Values.vault.files.serviceUser | quote }}
+            - name: MINIO_SERVICE_PASSWORD_FILE_NAME
+              value: {{ .Values.vault.files.servicePassword | quote }}
+            - name: USER_ASSETS_BUCKET
+              value: {{ .Values.init.buckets.userAssets | quote }}
+            - name: PUBLIC_ASSETS_BUCKET
+              value: {{ .Values.init.buckets.publicAssets | quote }}
+            - name: USER_ASSETS_RW_POLICY
+              value: {{ .Values.init.policies.userAssetsReadWrite | quote }}
+            - name: PUBLIC_ASSETS_RW_POLICY
+              value: {{ .Values.init.policies.publicAssetsReadWrite | quote }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts:
+            - name: init-config
+              mountPath: /config
+              readOnly: true
+            - name: vault-secrets
+              mountPath: {{ .Values.vault.mountPath | quote }}
+              readOnly: true
+      volumes:
+        - name: init-config
+          configMap:
+            name: {{ include "minio-vault.fullname" . }}-init
+            defaultMode: 0555
+            items:
+              - key: init-minio.sh
+                path: init-minio.sh
+              - key: user-assets-rw.json
+                path: policies/user-assets-rw.json
+              - key: public-assets-rw.json
+                path: policies/public-assets-rw.json
+              - key: public-assets-anonymous-download.json
+                path: policies/public-assets-anonymous-download.json
+        {{- include "minio-vault.vaultVolume" . | nindent 8 }}
+{{- end }}

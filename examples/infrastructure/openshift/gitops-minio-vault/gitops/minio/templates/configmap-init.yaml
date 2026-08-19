@@ -1,0 +1,17 @@
+{{- if .Values.init.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "minio-vault.fullname" . }}-init
+  labels:
+    {{- include "minio-vault.labels" . | nindent 4 }}
+data:
+  init-minio.sh: |-
+{{ .Files.Get "files/init-minio.sh" | indent 4 }}
+  user-assets-rw.json: |-
+{{ .Files.Get "files/policies/user-assets-rw.json" | indent 4 }}
+  public-assets-rw.json: |-
+{{ .Files.Get "files/policies/public-assets-rw.json" | indent 4 }}
+  public-assets-anonymous-download.json: |-
+{{ .Files.Get "files/policies/public-assets-anonymous-download.json" | indent 4 }}
+{{- end }}
