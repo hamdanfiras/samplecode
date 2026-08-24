@@ -59,6 +59,8 @@ If Windows reports that files are still open inside the vault, close them and ru
 
 - `create` refuses to overwrite an existing VHDX.
 - `mount` refuses to unlock a vault that is already unlocked.
+- `mount` refuses a VHDX file with the read-only file attribute set.
+- `mount` requests a writable VHDX attach and clears the disk read-only flag if Windows sets one.
 - `mount` refuses non-BitLocker volumes.
 - `eject` locks the BitLocker volume before dismounting.
 - `eject` does not force-close open files unless `-Force` is supplied.
