@@ -214,6 +214,40 @@ function Get-VhdDisk {
     }
 }
 
+function Assert-VaultFileWritable {
+    param(
+        [Parameter(Mandatory)]
+        [string] $ImagePath
+    )
+
+    $file = Get-Item -LiteralPath $ImagePath -ErrorAction Stop
+    if (($file.Attributes -band [System.IO.FileAttributes]::ReadOnly) -ne 0) {
+        throw "Vault file is marked read-only. Clear the file attribute before mounting writable: $ImagePath"
+    }
+}
+
+function Ensure-DiskWritable {
+    param(
+        [Parameter(Mandatory)]
+        [uint32] $DiskNumber
+    )
+
+    $disk = Get-Disk -Number $DiskNumber -ErrorAction Stop
+
+    if ($disk.IsReadOnly) {
+        Write-Host ""
+        Write-Host "Clearing read-only flag on disk $DiskNumber ..."
+        Set-Disk -Number $DiskNumber -IsReadOnly $false -ErrorAction Stop
+        $disk = Get-Disk -Number $DiskNumber -ErrorAction Stop
+    }
+
+    if ($disk.IsReadOnly) {
+        throw "VHDX disk $DiskNumber is still read-only after mounting. Check storage permissions for the VHDX file."
+    }
+
+    return $disk
+}
+
 function Get-UsablePartition {
     param(
         [Parameter(Mandatory)]
@@ -424,8 +458,9 @@ function New-SecureVhdx {
     try {
         New-VHD -Path $ImagePath -SizeBytes $sizeBytes -Dynamic | Out-Null
 
-        $mountedImage = Mount-VHD -Path $ImagePath -Passthru
+        $mountedImage = Mount-VHD -Path $ImagePath -Passthru -ReadOnly:$false
         $disk = $mountedImage | Get-Disk
+        $disk = Ensure-DiskWritable -DiskNumber $disk.Number
 
         if ($disk.PartitionStyle -eq "RAW") {
             Initialize-Disk -Number $disk.Number -PartitionStyle GPT | Out-Null
@@ -474,6 +509,8 @@ function Mount-SecureVhdx {
         throw "Vault file was not found: $ImagePath"
     }
 
+    Assert-VaultFileWritable -ImagePath $ImagePath
+
     $state = Get-VaultState -ImagePath $ImagePath
     if ($state.Attached -and $state.LockStatus -eq "Unlocked") {
         throw "Vault is already mounted and unlocked at $($state.MountPoint)."
@@ -483,7 +520,7 @@ function Mount-SecureVhdx {
         Write-Host ""
         Write-Host "Attaching VHDX:"
         Write-Host "  $ImagePath"
-        Mount-VHD -Path $ImagePath | Out-Null
+        Mount-VHD -Path $ImagePath -ReadOnly:$false | Out-Null
     }
 
     $disk = Get-VhdDisk -ImagePath $ImagePath
@@ -491,6 +528,7 @@ function Mount-SecureVhdx {
         throw "VHDX was not attached successfully."
     }
 
+    $disk = Ensure-DiskWritable -DiskNumber $disk.Number
     $mountPoint = Ensure-DriveLetter -DiskNumber $disk.Number
     $bitLockerVolume = Get-BitLockerVolumeSafe -MountPoint $mountPoint
 
@@ -622,6 +660,7 @@ try {
         "Dismount-VHD",
         "Get-DiskImage",
         "Get-Disk",
+        "Set-Disk",
         "Initialize-Disk",
         "New-Partition",
         "Get-Partition",
