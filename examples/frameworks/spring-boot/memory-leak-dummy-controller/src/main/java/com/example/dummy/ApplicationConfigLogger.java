@@ -9,19 +9,21 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
+import org.springframework.boot.context.logging.LoggingApplicationListener;
+import org.springframework.context.ApplicationListener;
+import org.springframework.core.Ordered;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.EnumerablePropertySource;
 import org.springframework.core.env.PropertySource;
-import org.springframework.stereotype.Component;
 
-@Component
-public class ApplicationConfigLogger implements ApplicationRunner {
+public class ApplicationConfigLogger
+        implements ApplicationListener<ApplicationEnvironmentPreparedEvent>, Ordered {
 
     private static final Logger log = LoggerFactory.getLogger(ApplicationConfigLogger.class);
 
     private static final String MASKED_VALUE = "******";
+    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     private static final Set<String> SENSITIVE_WORDS = Set.of(
             "api-key",
@@ -42,22 +44,18 @@ public class ApplicationConfigLogger implements ApplicationRunner {
             "session",
             "token");
 
-    private final ConfigurableEnvironment environment;
-    private final ObjectMapper objectMapper;
-
-    public ApplicationConfigLogger(
-            ConfigurableEnvironment environment,
-            ObjectMapper objectMapper) {
-        this.environment = environment;
-        this.objectMapper = objectMapper;
+    @Override
+    public int getOrder() {
+        return LoggingApplicationListener.DEFAULT_ORDER + 1;
     }
 
     @Override
-    public void run(ApplicationArguments args) {
+    public void onApplicationEvent(ApplicationEnvironmentPreparedEvent event) {
         if (!log.isDebugEnabled()) {
             return;
         }
 
+        ConfigurableEnvironment environment = event.getEnvironment();
         Set<String> propertyNames = new TreeSet<>();
 
         for (PropertySource<?> propertySource : environment.getPropertySources()) {
@@ -73,17 +71,17 @@ public class ApplicationConfigLogger implements ApplicationRunner {
         for (String propertyName : propertyNames) {
             Object value = isSensitive(propertyName)
                     ? MASKED_VALUE
-                    : environment.getProperty(propertyName);
+                    : getPropertyValue(environment, propertyName);
 
             config.put(propertyName, value);
         }
 
         try {
-            String json = objectMapper
+            String json = OBJECT_MAPPER
                     .writerWithDefaultPrettyPrinter()
                     .writeValueAsString(config);
 
-            log.debug("Application configuration:\n{}", json);
+            log.debug("Application configuration prepared before context startup:\n{}", json);
         } catch (JsonProcessingException ex) {
             log.warn("Failed to serialize application configuration for debug logging", ex);
         }
@@ -94,5 +92,13 @@ public class ApplicationConfigLogger implements ApplicationRunner {
 
         return SENSITIVE_WORDS.stream()
                 .anyMatch(lower::contains);
+    }
+
+    private static Object getPropertyValue(ConfigurableEnvironment environment, String propertyName) {
+        try {
+            return environment.getProperty(propertyName);
+        } catch (RuntimeException ex) {
+            return "<failed to resolve: " + ex.getClass().getSimpleName() + ": " + ex.getMessage() + ">";
+        }
     }
 }
